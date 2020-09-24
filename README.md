@@ -1,21 +1,21 @@
 # Qubes OS 101
 
 ## Table of Contents
-* [**1. Before You Proceed**]()
-* [**2. Settings Up Qubes OS**]()
-* [**3. Check for Updates**]() 
-* [**4. VM Settings**]()
-* [**5. Customize**]()
-* [**6. Password Management**]()
-* [**7. VPN**]()
-* [**8. Whonix**]()
-* [**9. Multimedia VM**]()
-* [**10. Disposable VMs**]()
-* [**11. Messenger**]()
-* [**12. Tips and Tricks**]()
-* [**13. Bisq DEX**]()
-* [**14. Electrum**]()
-* [**15. Trezor**]()
+* [**1. Before You Proceed**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#before-you-proceed)
+* [**2. Settings Up Qubes OS**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#setting-up-qubes-os)
+* [**3. Check for Updates**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#check-for-template-upgrades) 
+* [**4. VM Settings**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#vm-settings)
+* [**5. Customize**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#customize)
+* [**6. Password Management**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#password-management)
+* [**7. VPN**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#vpn)
+* [**8. Whonix**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#whonix)
+* [**9. Multimedia VM**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#multimedia-vm)
+* [**10. Disposable VMs**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#disposable-vms)
+* [**11. Messenger**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#messenger)
+* [**12. Tips and Tricks**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#tips-and-tricks)
+* [**13. Bisq DEX**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#bisq-dex)
+* [**14. Electrum**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#electrum)
+* [**15. Trezor**](https://github.com/gH7aerakaGpLTYrwVTa/Q101/blob/master/README.md#trezor)
 
 ## **Before You Proceed**
 Please watch the video or read docs about basic function before using Qubes OS. I assume you are somewhat familiar with command line, know basic things about Qubes like the difference between a Template VM & Application VM, and know a little bit about privacy tools.
