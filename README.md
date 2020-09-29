@@ -11,7 +11,7 @@
 * [**8. Whonix**](https://github.com/gH7aerakaGpLTYrwVTa/Qubes-OS-101/blob/master/README.md#whonix)
 * [**9. Multimedia VM**](https://github.com/gH7aerakaGpLTYrwVTa/Qubes-OS-101/blob/master/README.md#multimedia-vm)
 * [**10. Disposable VMs**](https://github.com/gH7aerakaGpLTYrwVTa/Qubes-OS-101/blob/master/README.md#disposable-vms)
-* [**11. Messenger**](https://github.com/gH7aerakaGpLTYrwVTa/Qubes-OS-101/master/README.md#messenger)
+* [**11. Messenger**](https://github.com/gH7aerakaGpLTYrwVTa/Qubes-OS-101/blob/master/README.md#messenger)
 * [**12. Tips and Tricks**](https://github.com/gH7aerakaGpLTYrwVTa/Qubes-OS-101/blob/master/README.md#tips-and-tricks)
 * [**13. Bisq DEX**](https://github.com/gH7aerakaGpLTYrwVTa/Qubes-OS-101/blob/master/README.md#bisq-dex)
 * [**14. Electrum**](https://github.com/gH7aerakaGpLTYrwVTa/Qubes-OS-101/blob/master/README.md#electrum)
