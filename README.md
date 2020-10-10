@@ -203,6 +203,12 @@ https://metrics.torproject.org/rs.html#search/contact:info@cypherpunklabs.com
 
 https://www.cypherpunklabs.com
 
+**Extras:**
+
+https://www.whonix.org/wiki/AppArmor#Qubes_Users_Note
+
+https://www.whonix.org/wiki/Whonix-Gateway_Security#Tor_Connection_Padding
+
 ## **Multimedia VM**
 
 Multimedia VM for things like Google chrome, vlc media player, spotify, etc.
