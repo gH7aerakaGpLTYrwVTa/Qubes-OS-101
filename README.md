@@ -102,6 +102,8 @@ https://github.com/QubesOS/qubes-issues/issues/3905
 
 Make sure that your template VMs are up to date and keep up with the latest annoucements
 
+<br/>
+
 **Upgrades, annoucements, and more:**
 
 https://www.qubes-os.org/news/categories/#announcements
@@ -123,9 +125,11 @@ https://www.qubes-os.org/doc/how-to-use-usb-devices/
 
 <br/>
 
-**PROTIP:** When updating your `sys-usb` qube to use a new template VM, this command will help you not lose USB peripheral access by properly restarting it. For example here is the command to switch to fedora-35 as the template VM:
+**PROTIP:** When updating your `sys-usb` qube to use a new template VM, this command will help you not lose USB peripheral access by properly restarting it. For example, run this command in `dom0` terminal to switch fedora-35 as the template VM:
 
 `qvm-shutdown --wait sys-usb; qvm-prefs sys-usb template fedora-34;qvm-start sys-usb`
+
+<br/>
 
 ## **Example Settings for Qubes** 
 
@@ -211,17 +215,21 @@ KeePassXC is a great open source password manager for linux. It should already b
 
 ## **VPN**
 
-**Mullvad VPN - Qubes OS:**
-https://mullvad.net/it/help/qubes-os-4-and-mullvad-vpn/
-
-**Qubes VPN Support:**
-https://github.com/tasket/Qubes-vpn-support
-
 Setup Qubes-vpn-support software in a proxy VM. 
 
 To have the ability to choose multiple geographic locations easily you may setup many VPN Proxy VMs. Be sure to select a VPN that has many locations (config files) available for download, or use multiple VPN providers. 
 
 Configure all neccesary VMs to use VPN proxyVMs for networking by default. Press Alt + F3 and open Qube Manager by searching its name. You may need to have Fn lock enabled if using a Thinkpad T series. Right click the app VM you want to have VPN, such as the one named untrusted, and choose settings. Set the networking to your new VPN proxy VM. Apply and press ok.
+
+**Qubes VPN Support:**
+https://github.com/tasket/Qubes-vpn-support
+
+<br/>
+
+Also check out the Mullvad VPN Qubes OS page:
+
+**Mullvad VPN - Qubes OS:**
+https://mullvad.net/it/help/qubes-os-4-and-mullvad-vpn/
 
 <br/>
 
@@ -255,9 +263,13 @@ I prefer Fedora rather than Debian for this.
 
 https://www.qubes-os.org/doc/multimedia/
 
+<br/>
+
 **For quick Chrome install:**
 
 `sudo nano /etc/yum.repos.d/google-chrome.repo`
+
+<br/>
 
 **Make enabled true by changing:**
 
@@ -265,11 +277,15 @@ https://www.qubes-os.org/doc/multimedia/
 
 Use Ctrl+O to save and Ctrl+X to exit nano text editor.
 
+<br/>
+
 **Install:**
 
 `sudo dnf install google-chrome-stable`
 
 Some users may want rpmfusion repository because it has some useful software. 
+
+<br/>
 
 **Enter these commands if you want rpmfusion:**
 
@@ -293,6 +309,8 @@ https://www.qubes-os.org/doc/resize-disk-image
 
 On a fresh installation of Qubes, the default DVM Template is called fedora-XX-dvm (where XX is the Fedora version of the default TemplateVM). If you have included the Whonix option in your install, there will also be a whonix-ws-dvm DVM Template available for your use.
 
+<br/>
+
 **You can set any AppVM to have the ability to act as a DVM Template in dom0 with:**
 
 ```qvm-prefs <vmname> template_for_dispvms True```
@@ -302,6 +320,8 @@ The default system wide DVM Template can be changed with qubes-prefs default_dis
 You can change this behaviour for individual VMs. 
 
 In the Application Menu, open Qube Settings for the VM in question and go to the “Advanced” tab. Here you can edit the “Default DisposableVM” setting to specify which DVM Template will be used to launch DisposableVMs from that VM. 
+
+<br/>
 
 **This can also be changed from the command line with:**
 
@@ -315,11 +335,15 @@ Warning: The opposite is also true. This means if you have changed anon-whonix�
 
 A DisposableVM launched from the Start Menu inherits the NetVM and firewall settings of the DVM Template on which it is based. Note that changing the “NetVM” setting for the system default DVM Template does affect the NetVM of DisposableVMs launched from the Start Menu. Different DVM Templates with individual NetVM settings can be added to the Start Menu.
 
+<br/>
+
 **Important Notes:**
 
 Some DVM Templates will automatically create a menu item to launch a DVM, if you do not see an entry and want to add one please use the command:
 
 ```qvm-features deb-dvm appmenus-dispvm 1```
+
+<br/>
 
 **To launch a DVM from the command line, in dom0 please type the following:**
 
@@ -333,9 +357,13 @@ Make a standalone VM for your messengers. See VM settings above for VCPU and RAM
 
 I prefer to intall `telegram-dekstop` on fedora using rpm fusion repo (info above):
 
+<br/>
+
 **Install using rpm fusion:**
 
 ```sudo dnf install telegram-desktop```
+
+<br/>
 
 **Other Info:**
 
@@ -349,11 +377,15 @@ https://www.addictivetips.com/ubuntu-linux-tips/how-to-use-and-install-snap-pack
 
 A snap’s installed applications can be found under /snap/bin, and subsequently, often added to $PATH. This makes commands directly accessible from the command line.
 
+<br/>
+
 **For example, the command installed via the VLC snap is simply vlc:**
 
 ```which vlc```
 
 ```/snap/bin/vlc```
+
+<br/>
 
 **If executing a command directly doesn’t work, try prefixing it with the /snap/bin path:**
 
@@ -361,11 +393,15 @@ A snap’s installed applications can be found under /snap/bin, and subsequently
 
 Adding /snap/bin to your default $PATH makes running snaps that don’t automatically add themselves more convenient.
 
+<br/>
+
 **Snaps are updated automatically. However, to manually check for updates, use the following command:**
 
 `sudo snap refresh vlc`
 
 Finally, use https://www.qubes-os.org/doc/managing-appvm-shortcuts/ to get a #shortcut setup
+
+<br/>
 
 **telegram 256x256 icon path:**
 
@@ -379,9 +415,13 @@ Finally, use https://www.qubes-os.org/doc/managing-appvm-shortcuts/ to get a #sh
 
 https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-fedora-32
 
+<br/>
+
 **Message of the day:**
 
 https://forums.fedoraforum.org/showthread.php?255780-How-to-get-motd-to-display
+
+<br/>
 
 **Use this command in dom0 to monitor resources used by VMs:**
 
@@ -393,6 +433,8 @@ You may wonder you see sys-net-dm & sys-usb-dm in addition to sys-net & sys-usb 
 
 "Xen uses by default qemu for HVMs. But this increases the attack surface for dom0, so in Qubes qemu is started in a PV domain, which is called [domainname]-dm."
 
+<br/>
+
 **Troubleshooting signed git commits:**
 
 https://github.com/pstadler/keybase-gpg-github/issues/24#issuecomment-340877348
@@ -400,6 +442,8 @@ https://github.com/pstadler/keybase-gpg-github/issues/24#issuecomment-340877348
 https://github.com/keybase/keybase-issues/issues/1712#issuecomment-141226705
 
 When trying to get setup with gpg + git I was getting error when trying to make signed commits.
+
+<br/>
 
 **Output:** 
 
@@ -409,9 +453,13 @@ When trying to get setup with gpg + git I was getting error when trying to make 
 
 Found the 2 links above that explain to try testing command below. If this fails with folowing errors, then you will know gpg having a problem.
 
+<br/>
+
 **Run Command:**
 
 ```echo "test" | gpg --clearsign```
+
+<br/>
 
 **Output:**
 
@@ -421,11 +469,15 @@ Found the 2 links above that explain to try testing command below. If this fails
 
 To get rid of the completely usless misleading "Inappropriate ioctl for device" error, you have to run following command.
 
+<br/>
+
 **Run Command:**
 
 ```export GPG_TTY=$(tty)```
 
 https://gist.github.com/Joeviocoe/6c4dc0c283f6d6c5b1a3f5af8793292b
+
+<br/>
 
 <br/>
 
@@ -439,9 +491,13 @@ https://wiki.ronindojo.io/Bisq
 
 https://bisq.wiki/Running_on_HiDPI_screen
 
+<br/>
+
 **Run Bisq:**
 
 ```GDK_SCALE=1 /opt/Bisq/Bisq --torControlPort=9051 --torControlPassword=notrequired --socks5ProxyBtcAddress=127.0.0.1:9050 --useTorForBtc=true --daoActivated=false```
+
+<br/>
 
 ## **Electrum**
 
@@ -467,9 +523,13 @@ Next, obtain your .onion address from the electrs instance on your node if you h
 
 Choose one of the two commands below to start your electrum wallet based on your Electrum setup.
 
+<br/>
+
 **Qubes Whonix start command (replace xxxx.onion):**
 
 ```electrum-appimage --oneserver --server XXXXX.onion:50001:t --proxy socks5:10.152.152.10:9111```
+
+<br/>
 
 **If you downloaded & verified .AppImage (manual setup) use this command (replace xxxx.onion):**
 
@@ -479,6 +539,8 @@ Choose one of the two commands below to start your electrum wallet based on your
 
 ## **Trezor**
 For hooking up a trezor to electrum in Qubes, you only need to add the udev rules from the link below into the standalone whonix VM you wish to use with your Trezor.
+
+<br/>
 
 **Udev Rules:**
 https://wiki.trezor.io/Qubes_OS
