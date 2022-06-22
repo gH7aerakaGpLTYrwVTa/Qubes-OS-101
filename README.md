@@ -17,12 +17,18 @@
 * [**14. Electrum**](https://github.com/gH7aerakaGpLTYrwVTa/Qubes-OS-101/blob/master/README.md#electrum)
 * [**15. Trezor**](https://github.com/gH7aerakaGpLTYrwVTa/Qubes-OS-101/blob/master/README.md#trezor)
 
+<br/>
+
 ## **Before You Proceed**
-Please watch the video or read docs about basic function before using Qubes OS. I assume you are somewhat familiar with command line, know basic things about Qubes like the difference between a Template VM & Application VM, and know a little bit about privacy tools.
+Please watch the video or read docs about basic function before using Qubes OS. I assume the reader is somewhat familiar with the command line, knows basic things about Qubes like the difference between a Template VM & Application VM, and understand the basics of some privacy tools like Tor.
+
+<br/>
 
 **Video:**
 
 https://www.youtube.com/watch?v=Aghj8MyDF4I
+
+<br/>
 
 **Docs:**
 
@@ -32,6 +38,8 @@ Verify hash files and download Qubes `.iso` from:
 
 ```https://www.qubes-os.org/doc/installation-guide/```
 
+<br/>
+
 **Privacy Tools:**
 
 https://www.privacytools.io/
@@ -39,6 +47,8 @@ https://www.privacytools.io/
 https://prism-break.org/en/
 
 Update all template VMs, whonix VMs, etc. before using them!
+
+<br/>
 
 **Open Source BIOS:**
 
@@ -50,7 +60,9 @@ https://web.archive.org/web/20200924050757/https://www.ministryofnodes.com.au/20
 
 https://www.youtube.com/watch?v=2Y06x1f22B0
 
-This may be worth looking into depending on your setup!
+Optional, but this may be worth looking into depending on your setup!
+
+<br/>
 
 ## **Setting Up Qubes OS**
 
@@ -76,11 +88,15 @@ In top left corner open the main menu. Select Terminal Emulator. This is the dom
 
 Add notes called REMINDERS.txt in all AppVMs to remind yourself to use Vault VM airgapped storage, dispVMs when needed, pgp encrypt, vpn as much as possible, keep regular backups of difficult configs, always update all password managers, and use tor where possible!
 
+<br/>
+
 **Setup mac address spoof:**
 
 https://www.qubes-os.org/doc/anonymizing-your-mac-address/
 
 https://github.com/QubesOS/qubes-issues/issues/3905
+
+<br/>
 
 ## **Check for Template Upgrades**
 
@@ -96,11 +112,26 @@ https://www.qubes-os.org/doc/templates/debian/#upgrading
 
 https://www.qubes-os.org/doc/template/fedora/upgrade/#detailed-instructions-for-standard-fedora-templatevms
 
-## **VM Settings** 
+<br/>
 
-I believe 2VCPU and 2gb RAM for normal stuff. For the VM with mediacodecs and videostreaming 4VCPU and 4gb RAM.
+## **USB Qube**
 
-All vpn vms should be 1 vcpu wtih 300/300 fixed ram (memory balance enabled is fine).
+Be aware of the usb qube named `sys-usb` and its function.
+
+https://www.qubes-os.org/doc/usb-qubes/
+https://www.qubes-os.org/doc/how-to-use-usb-devices/
+
+<br/>
+
+**PROTIP:** When updating your `sys-usb` qube to use a new template VM, this command will help you not lose USB peripheral access by properly restarting it. For example here is the command to switch to fedora-35 as the template VM:
+
+`qvm-shutdown --wait sys-usb; qvm-prefs sys-usb template fedora-34;qvm-start sys-usb`
+
+## **Example Settings for Qubes** 
+
+I think 2VCPU and 2gb RAM for things like very basic tasks. For the VM with mediacodecs and videostreaming 4VCPU and 4gb RAM.
+
+All vpn vms should be 1 vcpu wtih 300/300 fixed ram (memory balance enabled is fine). Qubes uses a ton of RAM so make sure you have a proper setup.
 
 *sys-net:* can stay at default settings.
 
@@ -120,6 +151,8 @@ All vpn vms should be 1 vcpu wtih 300/300 fixed ram (memory balance enabled is f
 
 *fedora-32-dvm:* vcpu2 - 400mb min / 2000mb max RAM
 
+<br/>
+
 ## **Customize** 
 
 Get your Qubes OS looking good:
@@ -134,6 +167,7 @@ https://www.qubes-os.org/doc/disposablevm-customization/#using-static-disposable
 
 https://www.qubes-os.org/doc/disposablevm-customization/
 
+<br/>
 
 **Qubes OS Darkmode:**
 
@@ -142,6 +176,8 @@ https://www.qubes-os.org/doc/dark-theme/#dark-xcfe-in-dom0
 Go to settings, under appearance, choose Adwaita-dark. You can also got to the fonts tab here and customize font/size.
 
 Go back to settings and click Window Manager, and set any option that you prefer.
+
+<br/>
 
 **Icons:**
 
@@ -155,17 +191,23 @@ Adding +i or -i adds or takes away immutability. When the file is immutable the 
 
 `sudo chattr -i ~/.config/xfce4/desktop/icons*`
 
+<br/>
+
 **Move Panel:**
 
 Some do not want the system panel on the top of their screen. Right click it and go to panel -> panel preferences. Unlock the panel, then use the button on the far left side to drag and move it to the bottom. Change any other settings that you prefer.
 
 Right click the workspaces on the panel (left of clock). Go to workspace settings and adjust to your preferences. 
 
+<br/>
+
 ## **Password Management**
 
 Always airgap the virtual machine you are using for password management. I simply clone the Qubes Vault VM which is already airgapped.
 
 KeePassXC is a great open source password manager for linux. It should already be installed in any fedora-30 based AppVm. Simply open that Qube's settings, go to the Applications tab, and select Keepassxc to be added to the menu.
+
+<br/>
 
 ## **VPN**
 
@@ -181,6 +223,8 @@ To have the ability to choose multiple geographic locations easily you may setup
 
 Configure all neccesary VMs to use VPN proxyVMs for networking by default. Press Alt + F3 and open Qube Manager by searching its name. You may need to have Fn lock enabled if using a Thinkpad T series. Right click the app VM you want to have VPN, such as the one named untrusted, and choose settings. Set the networking to your new VPN proxy VM. Apply and press ok.
 
+<br/>
+
 ## **Whonix**
 
 **Security, Privacy, Hardening, Etc:**
@@ -193,6 +237,7 @@ https://prism-break.org/en/
 
 https://github.com/tycrek/degoogle
 
+<br/>
 
 **Extras:**
 
@@ -200,13 +245,15 @@ https://www.whonix.org/wiki/AppArmor#Qubes_Users_Note
 
 https://www.whonix.org/wiki/Whonix-Gateway_Security#Tor_Connection_Padding
 
+<br/>
+
 ## **Multimedia VM**
 
 Multimedia VM for things like Google chrome, vlc media player, spotify, etc.
 
 I prefer Fedora rather than Debian for this.
 
-https://www.qubes-os.org/doc/multimedia/ 
+https://www.qubes-os.org/doc/multimedia/
 
 **For quick Chrome install:**
 
@@ -239,6 +286,8 @@ https://rpmfusion.org/keys
 (Optional) Resize app VMs or template VMs disk image as needed using `sudo df` to check on image size.
 
 https://www.qubes-os.org/doc/resize-disk-image
+
+<br/>
 
 ## **Disposable VMs**
 
@@ -275,6 +324,8 @@ Some DVM Templates will automatically create a menu item to launch a DVM, if you
 **To launch a DVM from the command line, in dom0 please type the following:**
 
 ```qvm-run --dispvm=NameOfDVM --service qubes.StartApp+NameOfApp```
+
+<br/>
 
 ## **Messenger**
 
@@ -319,6 +370,8 @@ Finally, use https://www.qubes-os.org/doc/managing-appvm-shortcuts/ to get a #sh
 **telegram 256x256 icon path:**
 
 ```/var/lib/snapd/snap/telegram-desktop/1038/share/icons/hicolor/256x256/apps/telegram.png```
+
+<br/>
 
 ## **Tips and Tricks**
 
@@ -374,6 +427,8 @@ To get rid of the completely usless misleading "Inappropriate ioctl for device" 
 
 https://gist.github.com/Joeviocoe/6c4dc0c283f6d6c5b1a3f5af8793292b
 
+<br/>
+
 ## **Bisq DEX**
 
 **General Info:**
@@ -408,7 +463,7 @@ https://www.whonix.org/wiki/Electrum/Manual_Installation
 
 Do not run Electrum yet!
 
-Next, obtain your .onion address from the electrs menu in RoninDojo.
+Next, obtain your .onion address from the electrs instance on your node if you have one or, or use a trusted node run by a friend/service.
 
 Choose one of the two commands below to start your electrum wallet based on your Electrum setup.
 
@@ -419,6 +474,8 @@ Choose one of the two commands below to start your electrum wallet based on your
 **If you downloaded & verified .AppImage (manual setup) use this command (replace xxxx.onion):**
 
 ```./electrum-3.3.8-x86_64.AppImage --oneserver --server XXXXX.onion:50001:t --proxy socks5:10.152.152.10:9111```
+
+<br/>
 
 ## **Trezor**
 For hooking up a trezor to electrum in Qubes, you only need to add the udev rules from the link below into the standalone whonix VM you wish to use with your Trezor.
