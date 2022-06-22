@@ -128,7 +128,7 @@ https://www.qubes-os.org/doc/how-to-use-usb-devices/
 
 **PROTIP:** When updating your `sys-usb` qube to use a new template VM, this command will help you not lose USB peripheral access by properly restarting it. For example, run this command in `dom0` terminal to switch fedora-35 as the template VM:
 
-`qvm-shutdown --wait sys-usb; qvm-prefs sys-usb template fedora-34;qvm-start sys-usb`
+`qvm-shutdown --wait sys-usb; qvm-prefs sys-usb template fedora-35;qvm-start sys-usb`
 
 <br/>
 
