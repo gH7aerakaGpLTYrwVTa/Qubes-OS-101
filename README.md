@@ -118,9 +118,10 @@ https://www.qubes-os.org/doc/template/fedora/upgrade/#detailed-instructions-for-
 
 ## **USB Qube**
 
-Be aware of the usb qube named `sys-usb` and its function.
+Take some time to learn about the USB qube named `sys-usb` and be aware of its function.
 
 https://www.qubes-os.org/doc/usb-qubes/
+
 https://www.qubes-os.org/doc/how-to-use-usb-devices/
 
 <br/>
