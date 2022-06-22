@@ -116,6 +116,12 @@ https://www.qubes-os.org/doc/template/fedora/upgrade/#detailed-instructions-for-
 
 <br/>
 
+**PROTIP:** the following command will help remove an old template VM that is installed by package manager run this command in dom0 terminal. For example, running this command in `dom0` terminal will allow you to remove an old `fedora-34` template VM:
+
+`qvm-prefs fedora-34 installed_by_rpm false`
+
+<br/>
+
 ## **USB Qube**
 
 Take some time to learn about the USB qube named `sys-usb` and be aware of its function.
@@ -126,7 +132,7 @@ https://www.qubes-os.org/doc/how-to-use-usb-devices/
 
 <br/>
 
-**PROTIP:** When updating your `sys-usb` qube to use a new template VM, this command will help you not lose USB peripheral access by properly restarting it. For example, run this command in `dom0` terminal to switch fedora-35 as the template VM:
+**PROTIP:** When updating your `sys-usb` qube to use a new template VM, the following command will help you not lose USB peripheral access by properly restarting it. For example, running this command in `dom0` terminal to switch `fedora-35` as the template VM:
 
 `qvm-shutdown --wait sys-usb; qvm-prefs sys-usb template fedora-35;qvm-start sys-usb`
 
