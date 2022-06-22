@@ -193,15 +193,6 @@ https://prism-break.org/en/
 
 https://github.com/tycrek/degoogle
 
-**Use Custom Tor Exits List:**
-
-https://www.whonix.org/wiki/Tor#Step_2:_Edit_Tor_Configuration
-
-https://github.com/CypherpunkLabs/ExitRelay
-
-https://metrics.torproject.org/rs.html#search/contact:info@cypherpunklabs.com
-
-https://www.cypherpunklabs.com
 
 **Extras:**
 
