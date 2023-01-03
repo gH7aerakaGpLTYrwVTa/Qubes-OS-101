@@ -233,7 +233,7 @@ https://github.com/tasket/Qubes-vpn-support
 
 <br/>
 
-***Quick Deployment Script for Qubes VPN Support:***
+***Quick Deployment Script for Qubes-vpn-support:***
 1. Create AppVM Qube for VPN with option enabled to provide network services to other Qubes.
 
 2. Go to new VPN Qube settings, services, and add vpn-handler-openvpn by clicking the + button.
