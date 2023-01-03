@@ -277,7 +277,7 @@ sudo sed -i '1,2d' /rw/config/vpn/userpassword.txt                     # FOR NO 
 printf "\nNow restart VPN Qube to start VPN!\n"
 ```
 
-7. Clone this new VPN AppVM many times and reuse this script!
+7. Clone this new VPN AppVM many times and reuse this script as needed!
 
 8. Example script usage with a .ovpn file:
 
