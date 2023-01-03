@@ -233,6 +233,44 @@ https://github.com/tasket/Qubes-vpn-support
 
 <br/>
 
+***Quick Deployment Script for Qubes VPN Support:***
+1. Create AppVM Qube for VPN with option enabled to provide network services to other Qubes
+2. Go to new VPN Qube settings, services, and add vpn-handler-openvpn by clicking the + button
+3. Download qubes-vpn-support and your .ovpn files, copy to new VPN Qube
+4. Make sure Qubes-vpn-support and .ovpn files are in home folder ~
+5. Make sure this script is in home folder and made executable:
+`nano vpn-setup`
+`sudo chmod +x vpn-setup` 
+6. Clone this new VPN AppVM many times and reuse this script!
+7. Example script usage:
+`./vpn-setup.sh
+```
+#!/bin/sh
+
+printf "\nChecking if /rw/config/vpn exists...\n"
+if [ -d /rw/config/vpn ]; then
+    printf "\n Found it!\n"
+else
+    printf "\nNot found, creating dir!\n"
+sudo mkdir /rw/config/vpn
+fi
+# Check if VPN config directory exists
+
+sudo cp ~/${1} /rw/config/vpn
+# Copy user input .ovpn file to VPN config directory
+
+printf "\nEnter random letters for username and password to skip prompt...\n"
+cd ~/Qubes-vpn-support && sudo bash ./install
+# It is important to enter random text here and not leave prompts blank
+
+printf "\nModifying username and password for max lazy mode...\n"
+sudo sed -i '2a VPNusernameGOEShere' /rw/config/vpn/userpassword.txt   # MODIFY THIS LINE WITH VPN USERNAME
+sudo sed -i '3a VPNpasswordGOEShere' /rw/config/vpn/userpassword.txt   # MODIFY THIS LINE WITH VPN PASSWORD
+sudo sed -i '1,2d' /rw/config/vpn/userpassword.txt                     # FOR NO PASSWORD MODE LEAVE PASSWORD BLANK DURING RANDOM LETTER ENTRY ABOVE
+
+printf "\nNow restart VPN Qube to start VPN!\n"
+```
+
 Also check out the Mullvad VPN Qubes OS page:
 
 **Mullvad VPN - Qubes OS:**
