@@ -281,7 +281,7 @@ printf "\nNow restart VPN Qube to start VPN!\n"
 
 8. Example script usage with a .ovpn file:
 
-`./vpn-setup.sh sweden-brazil-01.protonvpn.net.udp.ovpn`
+`./vpn-setup sweden-brazil-01.protonvpn.net.udp.ovpn`
 
 <br/>
 
