@@ -262,7 +262,7 @@ sudo mkdir /rw/config/vpn
 fi
 # Check if VPN config directory exists
 
-sudo cp "$HOME"/${1} /rw/config/vpn
+sudo cp "$HOME"/${1} /rw/config/vpn/vpn-client.conf
 # Copy user input .ovpn file to VPN config directory
 
 printf "\nEnter random letters for username and password to skip prompt...\n"
