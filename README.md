@@ -234,16 +234,21 @@ https://github.com/tasket/Qubes-vpn-support
 <br/>
 
 ***Quick Deployment Script for Qubes VPN Support:***
-1. Create AppVM Qube for VPN with option enabled to provide network services to other Qubes
-2. Go to new VPN Qube settings, services, and add vpn-handler-openvpn by clicking the + button
-3. Download qubes-vpn-support and your .ovpn files, copy to new VPN Qube
-4. Make sure Qubes-vpn-support and .ovpn files are in home folder ~
-5. Make sure this script is in home folder and made executable:
+1. Create AppVM Qube for VPN with option enabled to provide network services to other Qubes.
+
+2. Go to new VPN Qube settings, services, and add vpn-handler-openvpn by clicking the + button.
+
+3. Download Qubes-vpn-support and your .ovpn files, copy to new VPN Qube.
+
+4. Make sure Qubes-vpn-support and .ovpn files are in $HOME directory on new VPN Qube.
+
+5. Make sure the script (step #6 below) is in home folder and made executable:
+ 
 `nano vpn-setup`
-`sudo chmod +x vpn-setup` 
-6. Clone this new VPN AppVM many times and reuse this script!
-7. Example script usage with a .ovpn file:
-`./vpn-setup.sh sweden-brazil-01.protonvpn.net.udp.ovpn`
+
+`sudo chmod +x vpn-setup`
+
+6. Quick Deployment Script:
 
 ```
 #!/bin/sh
@@ -257,7 +262,7 @@ sudo mkdir /rw/config/vpn
 fi
 # Check if VPN config directory exists
 
-sudo cp ~/${1} /rw/config/vpn
+sudo cp "$HOME"/${1} /rw/config/vpn
 # Copy user input .ovpn file to VPN config directory
 
 printf "\nEnter random letters for username and password to skip prompt...\n"
@@ -272,7 +277,13 @@ sudo sed -i '1,2d' /rw/config/vpn/userpassword.txt                     # FOR NO 
 printf "\nNow restart VPN Qube to start VPN!\n"
 ```
 
-Also check out the Mullvad VPN Qubes OS page:
+7. Clone this new VPN AppVM many times and reuse this script!
+
+8. Example script usage with a .ovpn file:
+
+`./vpn-setup.sh sweden-brazil-01.protonvpn.net.udp.ovpn`
+
+<br/>
 
 **Mullvad VPN - Qubes OS:**
 https://mullvad.net/it/help/qubes-os-4-and-mullvad-vpn/
