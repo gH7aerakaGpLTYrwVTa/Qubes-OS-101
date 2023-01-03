@@ -242,8 +242,9 @@ https://github.com/tasket/Qubes-vpn-support
 `nano vpn-setup`
 `sudo chmod +x vpn-setup` 
 6. Clone this new VPN AppVM many times and reuse this script!
-7. Example script usage:
-`./vpn-setup.sh
+7. Example script usage with a .ovpn file:
+`./vpn-setup.sh sweden-brazil-01.protonvpn.net.udp.ovpn`
+
 ```
 #!/bin/sh
 
