@@ -231,6 +231,9 @@ Configure all neccesary VMs to use VPN proxyVMs for networking by default. Press
 **Qubes VPN Support:**
 https://github.com/tasket/Qubes-vpn-support
 
+**May be added to Qubes 4.2 ?:**
+https://github.com/QubesOS/qubes-issues/issues/3503
+
 <br/>
 
 ***Quick Deployment Script for Qubes-vpn-support:***
