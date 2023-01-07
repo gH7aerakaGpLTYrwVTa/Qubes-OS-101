@@ -234,13 +234,13 @@ https://github.com/tasket/Qubes-vpn-support
 <br/>
 
 ***Quick Deployment Script for Qubes-vpn-support:***
-1. Create AppVM Qube for VPN with option enabled to provide network services to other Qubes.
+1. Create AppVM (for VPN) with advanced option to provide network services to other Qubes enabled.
 
-2. Go to new VPN Qube settings, services, and add vpn-handler-openvpn by clicking the + button.
+2. Go to new AppVM (for VPN) settings, services, and add `vpn-handler-openvpn` by clicking the + button.
 
-3. Download Qubes-vpn-support and your .ovpn files, copy to new VPN Qube.
+3. Download Qubes-vpn-support (above) and your .ovpn files, copy all of this to new AppVM (for VPN).
 
-4. Make sure Qubes-vpn-support and .ovpn files are in $HOME directory on new VPN Qube.
+4. Make sure Qubes-vpn-support and .ovpn files are in $HOME directory on new AppVM (for VPN).
 
 5. Make sure the script (step #6 below) is in home folder and made executable:
  
@@ -277,7 +277,7 @@ sudo sed -i '1,2d' /rw/config/vpn/userpassword.txt                     # FOR NO 
 printf "\nNow restart VPN Qube to start VPN!\n"
 ```
 
-7. Clone this new VPN AppVM many times and reuse this script as needed!
+7. Clone this new AppVM (for VPN) many times and reuse this script as needed! Keep a fresh clone named something like `quick-vpn-deployment`
 
 8. Example script usage with a .ovpn file:
 
